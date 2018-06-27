@@ -1,0 +1,8 @@
+CustomerSegment|SegmentAutoRank|RFrom|RTo|FFrom|FTo|MFrom|MTo
+"Platinum"|1|40|50|40|50|40|50
+"Loyal Gold"|2|20|50|30|50|30|50
+"Up Sell"|3|40|50|40|50|10|30
+"Cross Sell"|4|30|40|0|10|0|10
+"Attend Now"|5|20|30|20|30|20|30
+"At Risk"|6|0|20|20|50|20|50
+"Dormant"|7|0|20|0|20|0|20
