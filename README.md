@@ -22,7 +22,7 @@ When you have completed this pattern, you will understand how to
 * Run the Segmentation of Customers using Manual and Auto mode
 * Run a Cognos dashboard to analyze the results of Customer segmentation and Buying insights of different Segments
 
-![png](doc/images/ipredict_arch_flow.png)
+![png](tree/master/images/ipredict_arch_flow.png)
 
 #### Steps:
 1.	User signs up for IBM Data Science experience
@@ -65,12 +65,12 @@ Follow these steps to setup and run this IBM Code Pattern. The steps are describ
 
 Sign up for IBM's [Watson Studio](https://www.ibm.com/cloud/watson-studio/). By signing up for Watson Studio, two services will be created - Spark and ObjectStore in your IBM Cloud account.  
 
-![png](doc/images/1_signup_watson_studio.jpg)  
+![png](tree/master/images/1_signup_watson_studio.jpg)  
 
 IBM Cloud -> Launch
 Catalog -> Watson -> Watson Studio
   
-![png](doc/images/2_watson_services_catalog.jpg)  
+![png](tree/master/images/2_watson_services_catalog.jpg)  
 
 
 ## 2. Create IBM Cloud services
@@ -92,23 +92,23 @@ Topics related to Data creation and access that will be specifically helpful in 
   
 i. Click on ``DB2 Warehouse on Cloud`` service in the IBM Cloud Dashboard. Click ``Open`` to launch the Dashboard.
 [DB2 Warehouse on Cloud](https://console.bluemix.net/catalog/services/db2-warehouse-on-cloud)  
-![png](doc/images/ipredict_db2_whse_oncloud.png)  
+![png](tree/master/images/ipredict_db2_whse_oncloud.png)  
 
   Note: Data will loaded into a DB2 database instead of reading directly from the .csv file.
   This is done to ensure end to end consistency of solution architecture when combined with other IoT IBM Patterns.  
 
 ii.	Choose an appropriate name for the DB2 Warehouse ``Service Name`` and choose  ``Free`` Pricing Plan. Click on Create.
   
-![png](doc/images/ipredict_db2_service_create.png)  
+![png](tree/master/images/ipredict_db2_service_create.png)  
   
 iii.	Click on DB2 Warehouse on cloud instance on ``IBM Cloud Dashboard``. You must be able to see the DB2 Warehouse service you created in the previous step. Click on the service name from the list. Once you are in the Service details page, click on ``Open`` button.
-![png](doc/images/ipredict_db2_object_storage.png)  
+![png](tree/master/images/ipredict_db2_object_storage.png)  
 
 iv.	``Load data`` which is downloaded in step 5.2.1 into a DB2 Warehouse table by selecting the sample data from ``My Computer -> browse files``.
-    ![png](doc/images/ipredict_db2_browse_file.png)
+    ![png](tree/master/images/ipredict_db2_browse_file.png)
   
 v.	Click on ``Next`` from the panel, choose schema and then create a ``New Table``.
-    ![png](doc/images/ipredict_db2_create_table1.png)
+    ![png](tree/master/images/ipredict_db2_create_table1.png)
 
   * The screenshot above shows ``DASH100002`` as the Schema name. Select an appropriate schema name for which you have read / write access
   * It is important to specify the name of the DB2 table as IOT_SENSOR_DATA, as it will be referred in Data science experience to read data from in later steps
@@ -122,19 +122,19 @@ Below are the steps to add a connection to access the data in Watson Studio Pyth
   ii. Choose ``Data Services -> Connections`` menu  
  iii. Click on the ``Create Connection`` button  
 
-  ![png](doc/images/ipredict_db2_create_conn1.png)  
+  ![png](tree/master/images/ipredict_db2_create_conn1.png)  
 
   iv. Give a name for your Watson Studio Data connection  
    v. Choose ``Service instance`` as the name of the DB2 warehouse service name you created earlier and Click ``Create``  
    
-  ![png](doc/images/ipredict_db2_create_conn2.png)  
+  ![png](tree/master/images/ipredict_db2_create_conn2.png)  
 
   vi. Navigate back to ``Project -> ViewAll Project -> pick your project``  
  vii. Click on the Find and add data icon ``1010`` on top right  
 viii. Click on ``Connection tab`` the check box next to the DB2 warehouse Data connection you just created and click ``Apply``  
   ix. Now the new connection is added to your Watson Studio IoT Predictive project  
   
-  ![png](doc/images/ipredict_db2_create_conn3.png)  
+  ![png](tree/master/images/ipredict_db2_create_conn3.png)  
 
 ## 3. Create the Jupyter notebook
 
@@ -161,10 +161,10 @@ https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segm
    * Click on the ``Find and add data`` icon on top ribbon
    * Select the file and upload one by one  
 
-   ![png](doc/images/3_upload_file_sample.png)  
+   ![png](tree/master/images/3_upload_file_sample.png)  
   
   Now you must be able to see the uploaded files listed under "My Projects -> Your Project Name -> Assets"  tab  
-  ![png](doc/images/4_dsx_fileassets.png)
+  ![png](tree/master/images/4_dsx_fileassets.png)
   
 ## 4. Add the data and configuraton file
 Fix-up configuration parameter .json file name and values:
@@ -178,7 +178,7 @@ For more details on Creating, Editing and sharing notebooks in IBM Watson Studio
 You can now update the variables that refer to the .txt configuration file name in the Python - Jupyter Notebook.
 This step is necessary only if you had changed the name of the sample .json configuration file you had uploaded earlier for any reason.  
 
-![png](doc/images/5_set_config_filename.png)  
+![png](tree/master/images/5_set_config_filename.png)  
 
 
 The default .txt configuration file, you uploaded earlier works without any changes with the Sample data supplied.
@@ -191,7 +191,7 @@ If you wanted to customise the Segmentation model to suit your requirements you 
 4. Delete the copy of 'PromoConfig.txt' in Watson Studio data store if one is already uploaded by you earlier.  
 5. Now upload your local edited copy of 'PromoConfig.txt ' by following the steps in section 6.3 above.  
     
-![png](doc/images/6_config_file_sample.png)
+![png](tree/master/images/6_config_file_sample.png)
     
 The descriptions of the columns that can be configured are as below.  
 
@@ -212,7 +212,7 @@ The steps below explain that.
   
 
 * In section 3.1.2 of Jupyter Notebook (not this README file), Insert (replace) your own Object storage file credentials to read the 'PromoConfig.txt' configuration file  
-![png](doc/images/8_insert_configconn.png)  
+![png](tree/master/images/8_insert_configconn.png)  
   
 
 * This step will auto generate a function that reads the data followed by a call to the function as below:  
@@ -224,20 +224,20 @@ For more details, revisit the documentation help links provided in beginning of 
 
 Use ``Find and Add Data`` (look for the ``10/01`` icon) and its ``Connections`` tab. You must be able to see your database connection created earlier. From there you can click ``Insert to Code`` under the 'Data connection' list and add ibm DBR code with connection credentials to the flow.
 
-![png](doc/images/9_insert_dataconn.png)
+![png](tree/master/images/9_insert_dataconn.png)
 
 Note: If you don't have your own data and configuration files, you can reuse our example in the "Read IoT Sensor data from database" section. Look in the /data/iot_sensor_dataset.csv directory for data file.
 
-![png](doc/images/10_insert_read_data_func.png)
+![png](tree/master/images/10_insert_read_data_func.png)
   
 The Customer segmentation can be run in 2 modes  
   
 1.	By setting the mode to “AUTO” 
-![png](doc/images/11_set_auto_mode.png)
+![png](tree/master/images/11_set_auto_mode.png)
 In AUTO mode Customer segmentation algorithm will automatically do the segmentation and ranking based on Customer Buying behavior     
   
 2.	By setting the mode to “MANUAL”  
-![png](doc/images/12_set_manual_mode.png)
+![png](tree/master/images/12_set_manual_mode.png)
 In MANUAL mode, the range of values mentioned for Customer metrics will be used for applying the segmentation.  
   
 
@@ -271,13 +271,13 @@ There are several ways to execute the code cells in your notebook:
 The notebook outputs the results in the Notebook which can be copied to clipboard
 Results for AUTO Customer segmentation  
   
-![png](doc/images/13_auto_segmentation_results.png)  
+![png](tree/master/images/13_auto_segmentation_results.png)  
 
 If you are satisfied with the Automatic segmentation results, you can proceed further for runningthe Cognos Dashboard and analyze the insights  
 
 If you wanted to further tweak and improve the results, you can update the config text file and run the Customer segmentation in manual mode  
 Results for MANUAL Customer segmentation  
-![png](doc/images/14_manual_segmentation_results.png)  
+![png](tree/master/images/14_manual_segmentation_results.png)  
   
 
 
@@ -289,3 +289,6 @@ Results for MANUAL Customer segmentation
 # License
 
 [Apache 2.0](LICENSE)
+
+
+
