@@ -77,7 +77,7 @@ Catalog -> Watson -> Watson Studio
 
 ### 2.1 Download sample data, configuration file, code  
 
-Download the [sample data file](https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online Retail Sample.csv), [sample configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt), [python notebook](https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segmentation_promo.ipynb) from github and store it in your a local folder. This will be used to upload to database in the next steps.
+Download the [sample data file](https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online%20Retail%20Sample.csv), [sample configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt), [python notebook](https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segmentation_promo.ipynb) from github and store it in your a local folder. This will be used to upload to database in the next steps.
 
 Once you are familiar with the entire flow of this Pattern, you can use your own data for analysis. But ensure that your data format is exactly same as provided in the sample data file and configuration file.
   
@@ -98,23 +98,23 @@ https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segm
 * Select the free Anaconda runtime.
 * Click the `Create` button.
 * Upload the sample .json, .txt Watson Studio configuration file to Watson Studio Object storage from URL below:  
-    "https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online Retail Sample.csv"  
+    "https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online%20Retail%20Sample.csv"  
     https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt  
 
   To upload these files in Watson Studio object storage, 
-   * Go to "My Projects -> Your Project Name"
+   * Go to `My Projects` -> `Your Project Name`
    * Click on the ``Find and add data`` icon on top ribbon
    * Select the file and upload one by one  
 
    ![png](images/3_upload_file_sample.png)  
   
-  Now you must be able to see the uploaded files listed under "My Projects -> Your Project Name -> Assets"  tab  
+  Now you must be able to see the uploaded files listed under `My Projects` -> `Your Project Name` -> `Assets`  tab  
   ![png](images/4_dsx_fileassets.png)
   
 ## 4. Add the data and configuraton file
 Fix-up configuration parameter .json file name and values:
 
-Go to the Notebook in Watson Studio by navigating to "My Projects -> IoT Predictive"
+Go to the Notebook in Watson Studio by navigating to `My Projects` -> `IoT Predictive`
 Under ``Assets`` tab, under ``Notebooks`` section you will find the Notebook you just imported
 Click on the ``Click to Edit and Lock`` icon to edit the notebook in Jupyter notebook in Watson Studio  
 
@@ -133,8 +133,8 @@ If you wanted to customise the Segmentation model to suit your requirements you 
 1. Download the [.txt configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt) to your Computer local folder  
 2. Open a local copy of the .txt file in text editor like notepad and edit the [Watson Studio configuration .json file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt)
 3. 3.	Update the ``column values`` to suit your requirements and save the PromoConfig.txt file. Retain the rest of the format and composition of the .txt file
-4. Delete the copy of 'PromoConfig.txt' in Watson Studio data store if one is already uploaded by you earlier.  
-5. Now upload your local edited copy of 'PromoConfig.txt ' by following the steps in section 6.3 above.  
+4. Delete the copy of `PromoConfig.txt` in Watson Studio data store if one is already uploaded by you earlier.  
+5. Now upload your local edited copy of `PromoConfig.txt` by following the steps in section 6.3 above.  
     
 ![png](images/6_config_file_sample.png)
     
@@ -156,7 +156,7 @@ This needs to be replaced by your user specific function with your own access cr
 The steps below explain that.  
   
 
-* In section 3.1.2 of Jupyter Notebook (not this README file), Insert (replace) your own Object storage file credentials to read the 'PromoConfig.txt' configuration file  
+* In section 3.1.2 of Jupyter Notebook (not this README file), Insert (replace) your own Object storage file credentials to read the `PromoConfig.txt` configuration file  
 ![png](images/8_insert_configconn.png)  
   
 
@@ -167,11 +167,11 @@ For more details, revisit the documentation help links provided in beginning of 
 
 #### Add the data and configuration to the notebook
 
-Use ``Find and Add Data`` (look for the ``10/01`` icon) and its ``Connections`` tab. You must be able to see your database connection created earlier. From there you can click ``Insert to Code`` under the 'Data connection' list and add ibm DBR code with connection credentials to the flow.
+Use ``Find and Add Data`` (look for the ``10/01`` icon) and its ``Connections`` tab. You must be able to see your database connection created earlier. From there you can click ``Insert to Code`` under the `Data connection` list and add ibm DBR code with connection credentials to the flow.
 
 ![png](images/9_insert_dataconn.png)
 
-Note: If you don't have your own data and configuration files, you can reuse our example in the "Read IoT Sensor data from database" section. Look in the /data/iot_sensor_dataset.csv directory for data file.
+Note: If you don't have your own data and configuration files, you can reuse our example in the `Read IoT Sensor data from database` section. Look in the `/data/iot_sensor_dataset.csv` directory for data file.
 
 ![png](images/10_insert_read_data_func.png)
   
