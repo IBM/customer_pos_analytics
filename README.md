@@ -80,62 +80,7 @@ Catalog -> Watson -> Watson Studio
 Download the [sample data file](https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online Retail Sample.csv), [sample configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt), [python notebook](https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segmentation_promo.ipynb) from github and store it in your a local folder. This will be used to upload to database in the next steps.
 
 Once you are familiar with the entire flow of this Pattern, you can use your own data for analysis. But ensure that your data format is exactly same as provided in the sample data file and configuration file.
-
-### 2.2 Create a DB2 Warehouse on IBM Cloud
-
-If you are not already familiar with how to create, access data from data store in Watson Studio, get yourself familiarised by following this documentation. [Add data to project](https://datascience.ibm.com/docs/content/manage-data/add-data-project.html)
-
-Topics related to Data creation and access that will be specifically helpful in this Pattern are as below:
-
-* [Create connections to databases](https://datascience.ibm.com/docs/content/manage-data/dw08.html)  
-* [Load and access data in a notebook](https://datascience.ibm.com/docs/content/analyze-data/load-and-access-data.html?linkInPage=true)  
   
-i. Click on ``DB2 Warehouse on Cloud`` service in the IBM Cloud Dashboard. Click ``Open`` to launch the Dashboard.
-[DB2 Warehouse on Cloud](https://console.bluemix.net/catalog/services/db2-warehouse-on-cloud)  
-![png](images/ipredict_db2_whse_oncloud.png)  
-
-  Note: Data will loaded into a DB2 database instead of reading directly from the .csv file.
-  This is done to ensure end to end consistency of solution architecture when combined with other IoT IBM Patterns.  
-
-ii.	Choose an appropriate name for the DB2 Warehouse ``Service Name`` and choose  ``Free`` Pricing Plan. Click on Create.
-  
-![png](images/ipredict_db2_service_create.png)  
-  
-iii.	Click on DB2 Warehouse on cloud instance on ``IBM Cloud Dashboard``. You must be able to see the DB2 Warehouse service you created in the previous step. Click on the service name from the list. Once you are in the Service details page, click on ``Open`` button.
-![png](images/ipredict_db2_object_storage.png)  
-
-iv.	``Load data`` which is downloaded in step 5.2.1 into a DB2 Warehouse table by selecting the sample data from ``My Computer -> browse files``.
-    ![png](images/ipredict_db2_browse_file.png)
-  
-v.	Click on ``Next`` from the panel, choose schema and then create a ``New Table``.
-    ![png](images/ipredict_db2_create_table1.png)
-
-  * The screenshot above shows ``DASH100002`` as the Schema name. Select an appropriate schema name for which you have read / write access
-  * It is important to specify the name of the DB2 table as IOT_SENSOR_DATA, as it will be referred in Data science experience to read data from in later steps
-
-### 2.3 Create DB2 Warehouse Connection in Watson Studio  
-
-We need to link the data we just uploaded into the DB2 Warehouse database with Watson Studio in order to run the analysis.  
-Below are the steps to add a connection to access the data in Watson Studio Python Jupyter notebook.  
-
-   i. Navigate to Watson Studio ``Project -> ViewAll Project -> pick your project``  
-  ii. Choose ``Data Services -> Connections`` menu  
- iii. Click on the ``Create Connection`` button  
-
-  ![png](images/ipredict_db2_create_conn1.png)  
-
-  iv. Give a name for your Watson Studio Data connection  
-   v. Choose ``Service instance`` as the name of the DB2 warehouse service name you created earlier and Click ``Create``  
-   
-  ![png](images/ipredict_db2_create_conn2.png)  
-
-  vi. Navigate back to ``Project -> ViewAll Project -> pick your project``  
- vii. Click on the Find and add data icon ``1010`` on top right  
-viii. Click on ``Connection tab`` the check box next to the DB2 warehouse Data connection you just created and click ``Apply``  
-  ix. Now the new connection is added to your Watson Studio IoT Predictive project  
-  
-  ![png](images/ipredict_db2_create_conn3.png)  
-
 ## 3. Create the Jupyter notebook
 
 First create a new project in Watson Studio. Follow the detailed steps provided in the [IBM online documentation for Watson Studio Project creation](https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html), or watch a video on using [Watson Studio to create a project](https://youtu.be/QSttEjcHtl0).
