@@ -47,7 +47,7 @@ When you have completed this pattern, you will understand how to
   
 # Watch the Video  
 
-[![](http://img.youtube.com/vi/k8uPYd3jUFs/0.jpg)](https://youtu.be/k8uPYd3jUFs)
+[![](http://img.youtube.com/vi/k8uPYd3jUFs/0.png)](https://youtu.be/k8uPYd3jUFs)
 
 # Steps
 
@@ -65,12 +65,12 @@ Follow these steps to setup and run this IBM Code Pattern. The steps are describ
 
 Sign up for IBM's [Watson Studio](https://www.ibm.com/cloud/watson-studio/). By signing up for Watson Studio, two services will be created - Spark and ObjectStore in your IBM Cloud account.  
 
-![png](images/1_signup_watson_studio.jpg)  
+![png](images/1_signup_watson_studio.png)  
 
 IBM Cloud -> Launch
 Catalog -> Watson -> Watson Studio
   
-![png](images/2_watson_services_catalog.jpg)  
+![png](images/2_watson_services_catalog.png)  
 
 
 ## 2. Create IBM Cloud services
@@ -289,6 +289,4 @@ Results for MANUAL Customer segmentation
 # License
 
 [Apache 2.0](LICENSE)
-
-
 
