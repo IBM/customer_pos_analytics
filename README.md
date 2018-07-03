@@ -43,7 +43,7 @@ When you have completed this pattern, you will understand how to
 
 * [Analytics](https://developer.ibm.com/code/technologies/analytics?cm=IBMCode-_--_-featured_technologies-_-analytics): Finding patterns in data to derive information.
 * [Data Science](https://developer.ibm.com/code/technologies/data-science?cm=IBMCode-_--_-featured_technologies-_-data-science):Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-* •	[IBM CognosLive Embedded](https://console.bluemix.net/catalog/services/ibm-cognos-dashboard-embedded): The IBM Cognos Dashboard Embedded lets you, the developer, painlessly add end-to-end data visualization capabilities to your application so your users can easily drag and drop to quickly find valuable insight and create visualizations on their own.
+* [IBM CognosLive Embedded](https://console.bluemix.net/catalog/services/ibm-cognos-dashboard-embedded): The IBM Cognos Dashboard Embedded lets you, the developer, painlessly add end-to-end data visualization capabilities to your application so your users can easily drag and drop to quickly find valuable insight and create visualizations on their own.
   
 # Watch the Video  
 
