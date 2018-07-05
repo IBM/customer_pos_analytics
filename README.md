@@ -43,7 +43,10 @@ When you have completed this pattern, you will understand how to
 
 * [Analytics](https://developer.ibm.com/code/technologies/analytics?cm=IBMCode-_--_-featured_technologies-_-analytics): Finding patterns in data to derive information.
 * [Data Science](https://developer.ibm.com/code/technologies/data-science?cm=IBMCode-_--_-featured_technologies-_-data-science):Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-* [IBM CognosLive Embedded](https://console.bluemix.net/catalog/services/ibm-cognos-dashboard-embedded): The IBM Cognos Dashboard Embedded lets you, the developer, painlessly add end-to-end data visualization capabilities to your application so your users can easily drag and drop to quickly find valuable insight and create visualizations on their own.
+* [IBM Cognos Live Embedded](https://console.bluemix.net/catalog/services/ibm-cognos-dashboard-embedded): The IBM Cognos Dashboard Embedded lets you, the developer, painlessly add end-to-end data visualization capabilities to your application so your users can easily drag and drop to quickly find valuable insight and create visualizations on their own.
+It is a new, API-based solution that lets developers easily add end-to-end data visualization capabilities to their applications so users can create visualizations that feel like part of the app. 
+It offers developers the ability to define the user workflow and control the options available to users – from a guided exploration of the analysis through authored fixed dashboards to a free-form analytic exploration environment in which end-users choose their own visualizations – and virtually anything in between. 
+* [Cognos DashBoard Embedded](https://developer.ibm.com/code/2018/04/20/understand-data-cognos-dashboard-embedded/)
   
 # Watch the Video  
 
@@ -225,8 +228,59 @@ Results for MANUAL Customer segmentation
 ![png](images/14_manual_segmentation_results.png)  
   
 
+## 7. Dashboard for Customer Segment Visualization
+  
+Understanding data effectively can be tricky. With too little data, any kind of analysis is unreliable. But too much data can make it difficult to understand exactly what you’re looking at. These days, very few people suffer from too little data, but too much data is a common problem in the age of big data. 
+The [Cognos Dashboard Embedded](https://developer.ibm.com/data/cognos-dashboard/), a new service offered on IBM Cloud, lets developers easily add end-to-end data visualization capabilities to their applications so users can create visualizations that feel like part of the app.
+  
+### 7.1 Steps to Create the Visualizations:    
+As explained in the beginning of this Code Pattern you must have completed the below steps  
+1. Watson Studio & Create the Service  
+2. Watson Studio instance  
+3. Craete a New Project in Watson Project  
 
+STEP 4: See for the output of the file loaded to datasets tab as part of the model execution process (see previous sections)
+If you don’t see the data file which is in csv format then,
+Add a csv file to the Project space which eventually will be added to the Datasets.
 
+![png](images/22_list_dataassets.png)  
+  
+STEP 5: From the Dashboard tab add a new dashboard:  
+
+![png](images/23_new_dashboard.png)  
+  
+As you are creating the dashboard for the first time, you will need to create Cognos Dashboard service.  
+
+![png](images/24_create_cognosdashservice.png)  
+  
+STEP 6: Add a source as the .csv file from the recently uploaded dataset:  
+
+![png](images/25_add_cognossourcedata.png)  
+  
+See available csv files. Pick the ones which your model has uploaded to Cloud Storage space given to you.  
+Click on the Segmented Customers csv file:  
+
+![png](images/26_segmented_custdatafile.png)  
+  
+STEP 6: Now, you can drag and drop the required fields to the Dashboard area.  
+
+![png](images/27_addfields_todash.png)  
+  
+Also, you can create your own Calculations.  
+
+![png](images/28_create_calculations.png)  
+  
+![png](images/29_create_calculations.png)  
+  
+STEP 7: View Cognos dashboard:  
+![png](images/30_view_cognosdashboard.png)  
+  
+
+STEP 8: Finally Share the output - Once you are done with building the simple and easy dashboard, you can share as an URL which you can plug into your any application.  
+![png](images/31_share_cognosdashboard.png)  
+  
+[Sample Dashboard for Customer Segmentataion](https://dataplatform.ibm.com/dashboards/88588f96-ce99-4483-b6ea-e6692d621307/view/7723bc0138e229ed74d2f2e407cf2f0e2b362c5db2bbd60288d07b4906362397a83f4191c828185ddf155765f4bf470dcb)
+  
 # Troubleshooting
 
 [See DEBUGGING.md](DEBUGGING.md)
