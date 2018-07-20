@@ -5,22 +5,36 @@
 Profile Customer based on their Buying behavior using POS(Point of Sale) data from a Retail stores.  
 Normalised Behavior scores are computed based on their Shopping patterns and a Analytics Segmantation  
 is run to identify Customers like Gold Class, Customers with Up Sell prospects or Customers at Risk and   
-Dormant Customers. These Segments of Customers are then used for launching specific Promotions 
+Dormant Customers. These Segments of Customers are then used for launching specific Promotions  
   
 Segmentation of Customer is a necessary first step in any Retail environment that needs to enhance their Customer experience. Customer Segmentation can be done using Point of Sale (PoS) data in Retail. Point of Sale data is captured at the counter in every Retail outlet either in FMCG or CPG  
-
-This Code pattern is a walkthrough of the steps involved in using this PoS data to Segment Customers based on their buying behavior. Segmentation techniques are used to Rank Customers. The ranked Customer data is further used to generate Dashboards that delivers insights on the Customer buying Metrics  
   
+Below are some of the reasons that compel segmenting Customers for effective Promotions.  
+* Not all Customers behave similarly  
+* Customers of certain similarity show similar predictable behavior  
+* There cannot be one common Customer engagement strategy for approaching all Customers  
+  
+The above pointers lead to the bigger question of:  
+* How to identify different Customer groups who exhibit similar behavior?   
+  
+This Code pattern is a walkthrough of the steps involved in using PoS data to Segment Customers based on their buying behavior. Segmentation techniques are used to Rank Customers. The ranked Customer data is further used to generate Dashboards that delivers insights on the Customer buying Metrics  
+
 IBM cloud storage, Python notebooks in IBM Data science experience, IBM Cognos will be used to implement the above Use case  
   
 All the intermediary steps are modularized and all code open sourced to enable developers to use / modify the modules / sub-modules as they see fit for their specific application  
   
-When you have completed this pattern, you will understand how to
+When you have completed this pattern, you will understand how to  
   
 *	Read Retail Point of Sale (PoS) data stored in the IBM Object storage
+* Compute Normalised Customer metrics from the CustomerPoS data
 *	Configure the features for Segmentation
-* Run the Segmentation of Customers using Manual and Auto mode
-* Run a Cognos dashboard to analyze the results of Customer segmentation and Buying insights of different Segments
+* Run the Segmentation of Customers using Manual and Auto mode for Ranking the Customers  
+  A hybrid unsupervised k-means technique is applied on the Normalised Customer metrics is used in Auto mode  
+  Feature to allow configuration of Normalised ranges for the Customer metrics can be used in the Manual mode  
+  This is to ensure Developers who are new to these techniques can start experiments using Auto mode  
+  The initial results can be further fine tuned using Manual mode  
+* Run a Cognos dashboard to analyze the results of Customer segmentation and Buying insights of different Segments  
+  This step will enable visually analyze and present the Customer segmentation results  
 
 ![png](images/ipredict_arch_flow.png)
 
@@ -34,9 +48,9 @@ When you have completed this pattern, you will understand how to
 
 # Included Components
 
-•	[IBM Cloud](https://console.bluemix.net/catalog/): IBM's innovative cloud computing platform or IBM Cloud in short (formerly Bluemix) combines platform as a service (PaaS) with infrastructure as a service (IaaS) and includes a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
+*	[IBM Cloud](https://console.bluemix.net/catalog/): IBM's innovative cloud computing platform or IBM Cloud in short (formerly Bluemix) combines platform as a service (PaaS) with infrastructure as a service (IaaS) and includes a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using Python, Jupyter Notebook and RStudio in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-•	[IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using Python, Jupyter Notebook and RStudio in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+*	[IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using Python, Jupyter Notebook and RStudio in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [IBM Cloud Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
 # Featured Technologies
@@ -117,7 +131,7 @@ https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segm
 ## 4. Add the data and configuraton file
 Fix-up configuration parameter .json file name and values:
 
-Go to the Notebook in Watson Studio by navigating to `My Projects` -> `IoT Predictive`
+Go to the Notebook in Watson Studio by navigating to `My Projects` -> `Your Project Name`
 Under ``Assets`` tab, under ``Notebooks`` section you will find the Notebook you just imported
 Click on the ``Click to Edit and Lock`` icon to edit the notebook in Jupyter notebook in Watson Studio  
 
