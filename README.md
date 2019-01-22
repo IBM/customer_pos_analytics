@@ -1,40 +1,40 @@
-  
+
 # Analytics driven Customer Behavior Ranking for Retail Promotions using POS data
 
-> Analytics driven Customer Behavior Ranking for Retail Promotions using POS data  
-Profile Customer based on their Buying behavior using POS(Point of Sale) data from a Retail stores.  
-Normalised Behavior scores are computed based on their Shopping patterns and a Analytics Segmantation  
-is run to identify Customers like Gold Class, Customers with Up Sell prospects or Customers at Risk and   
-Dormant Customers. These Segments of Customers are then used for launching specific Promotions  
-  
-Segmentation of Customer is a necessary first step in any Retail environment that needs to enhance their Customer experience. Customer Segmentation can be done using Point of Sale (PoS) data in Retail. Point of Sale data is captured at the counter in every Retail outlet either in FMCG or CPG  
-  
-Below are some of the reasons that compel segmenting Customers for effective Promotions.  
-* Not all Customers behave similarly  
-* Customers of certain similarity show similar predictable behavior  
-* There cannot be one common Customer engagement strategy for approaching all Customers  
-  
-The above pointers lead to the bigger question of:  
-* How to identify different Customer groups who exhibit similar behavior?   
-  
-This Code pattern is a walkthrough of the steps involved in using PoS data to Segment Customers based on their buying behavior. Segmentation techniques are used to Rank Customers. The ranked Customer data is further used to generate Dashboards that delivers insights on the Customer buying Metrics  
+> Analytics driven Customer Behavior Ranking for Retail Promotions using POS data
+Profile Customer based on their Buying behavior using POS(Point of Sale) data from a Retail stores.
+Normalised Behavior scores are computed based on their Shopping patterns and a Analytics Segmantation
+is run to identify Customers like Gold Class, Customers with Up Sell prospects or Customers at Risk and
+Dormant Customers. These Segments of Customers are then used for launching specific Promotions
 
-IBM cloud storage, Python notebooks in IBM Data science experience, IBM Cognos will be used to implement the above Use case  
-  
-All the intermediary steps are modularized and all code open sourced to enable developers to use / modify the modules / sub-modules as they see fit for their specific application  
-  
-When you have completed this pattern, you will understand how to  
-  
+Segmentation of Customer is a necessary first step in any Retail environment that needs to enhance their Customer experience. Customer Segmentation can be done using Point of Sale (PoS) data in Retail. Point of Sale data is captured at the counter in every Retail outlet either in FMCG or CPG
+
+Below are some of the reasons that compel segmenting Customers for effective Promotions.
+* Not all Customers behave similarly
+* Customers of certain similarity show similar predictable behavior
+* There cannot be one common Customer engagement strategy for approaching all Customers
+
+The above pointers lead to the bigger question of:
+* How to identify different Customer groups who exhibit similar behavior?
+
+This Code pattern is a walkthrough of the steps involved in using PoS data to Segment Customers based on their buying behavior. Segmentation techniques are used to Rank Customers. The ranked Customer data is further used to generate Dashboards that delivers insights on the Customer buying Metrics
+
+IBM cloud storage, Python notebooks in IBM Data science experience, IBM Cognos will be used to implement the above Use case
+
+All the intermediary steps are modularized and all code open sourced to enable developers to use / modify the modules / sub-modules as they see fit for their specific application
+
+When you have completed this pattern, you will understand how to
+
 *	Read Retail Point of Sale (PoS) data stored in the IBM Object storage
 * Compute Normalised Customer metrics from the CustomerPoS data
 *	Configure the features for Segmentation
-* Run the Segmentation of Customers using Manual and Auto mode for Ranking the Customers  
-  A hybrid unsupervised k-means technique is applied on the Normalised Customer metrics is used in Auto mode  
-  Feature to allow configuration of Normalised ranges for the Customer metrics can be used in the Manual mode  
-  This is to ensure Developers who are new to these techniques can start experiments using Auto mode  
-  The initial results can be further fine tuned using Manual mode  
-* Run a Cognos dashboard to analyze the results of Customer segmentation and Buying insights of different Segments  
-  This step will enable visually analyze and present the Customer segmentation results  
+* Run the Segmentation of Customers using Manual and Auto mode for Ranking the Customers
+  A hybrid unsupervised k-means technique is applied on the Normalised Customer metrics is used in Auto mode
+  Feature to allow configuration of Normalised ranges for the Customer metrics can be used in the Manual mode
+  This is to ensure Developers who are new to these techniques can start experiments using Auto mode
+  The initial results can be further fine tuned using Manual mode
+* Run a Cognos dashboard to analyze the results of Customer segmentation and Buying insights of different Segments
+  This step will enable visually analyze and present the Customer segmentation results
 
 ![png](images/ipredict_arch_flow.png)
 
@@ -48,21 +48,21 @@ When you have completed this pattern, you will understand how to
 
 # Included Components
 
-*	[IBM Cloud](https://console.bluemix.net/catalog/): IBM's innovative cloud computing platform or IBM Cloud in short (formerly Bluemix) combines platform as a service (PaaS) with infrastructure as a service (IaaS) and includes a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
+*	[IBM Cloud](https://cloud.ibm.com/catalog/): IBM's innovative cloud computing platform or IBM Cloud in short (formerly Bluemix) combines platform as a service (PaaS) with infrastructure as a service (IaaS) and includes a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
 * [IBM Watson Studio](https://www.ibm.com/cloud/watson-studio): Analyze data using Python, Jupyter Notebook and RStudio in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 *	[IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using Python, Jupyter Notebook and RStudio in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-* [IBM Cloud Object Storage](https://console.ng.bluemix.net/catalog/services/object-storage/?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
+* [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage?cm_sp=dw-bluemix-_-code-_-devcenter): An IBM Cloud service that provides an unstructured cloud data store to build and deliver cost effective apps and services with high reliability and fast speed to market.
 
 # Featured Technologies
 
-* [Analytics](https://developer.ibm.com/code/technologies/analytics?cm=IBMCode-_--_-featured_technologies-_-analytics): Finding patterns in data to derive information.
-* [Data Science](https://developer.ibm.com/code/technologies/data-science?cm=IBMCode-_--_-featured_technologies-_-data-science):Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
-* [IBM Cognos Live Embedded](https://console.bluemix.net/catalog/services/ibm-cognos-dashboard-embedded): The IBM Cognos Dashboard Embedded lets you, the developer, painlessly add end-to-end data visualization capabilities to your application so your users can easily drag and drop to quickly find valuable insight and create visualizations on their own.
-It is a new, API-based solution that lets developers easily add end-to-end data visualization capabilities to their applications so users can create visualizations that feel like part of the app. 
-It offers developers the ability to define the user workflow and control the options available to users – from a guided exploration of the analysis through authored fixed dashboards to a free-form analytic exploration environment in which end-users choose their own visualizations – and virtually anything in between. 
+* [Analytics](https://developer.ibm.com/technologies/analytics/?cm=IBMCode-_--_-featured_technologies-_-analytics): Finding patterns in data to derive information.
+* [Data Science](https://developer.ibm.com/technologies/data-science/?cm=IBMCode-_--_-featured_technologies-_-data-science):Systems and scientific methods to analyze structured and unstructured data in order to extract knowledge and insights.
+* [IBM Cognos Live Embedded](https://cloud.ibm.com/catalog/services/ibm-cognos-dashboard-embedded): The IBM Cognos Dashboard Embedded lets you, the developer, painlessly add end-to-end data visualization capabilities to your application so your users can easily drag and drop to quickly find valuable insight and create visualizations on their own.
+It is a new, API-based solution that lets developers easily add end-to-end data visualization capabilities to their applications so users can create visualizations that feel like part of the app.
+It offers developers the ability to define the user workflow and control the options available to users – from a guided exploration of the analysis through authored fixed dashboards to a free-form analytic exploration environment in which end-users choose their own visualizations – and virtually anything in between.
 * [Cognos DashBoard Embedded](https://developer.ibm.com/code/2018/04/20/understand-data-cognos-dashboard-embedded/)
-  
-# Watch the Video  
+
+# Watch the Video
 
 [![](http://img.youtube.com/vi/k8uPYd3jUFs/0.png)](https://youtu.be/k8uPYd3jUFs)
 
@@ -80,31 +80,31 @@ Follow these steps to setup and run this IBM Code Pattern. The steps are describ
 
 ## 1. Sign up for the Watson Studio
 
-Sign up for IBM's [Watson Studio](https://www.ibm.com/cloud/watson-studio/). By signing up for Watson Studio, two services will be created - Spark and ObjectStore in your IBM Cloud account.  
+Sign up for IBM's [Watson Studio](https://www.ibm.com/cloud/watson-studio/). By signing up for Watson Studio, two services will be created - Spark and ObjectStore in your IBM Cloud account.
 
-![png](images/1_signup_watson_studio.png)  
+![png](images/1_signup_watson_studio.png)
 
 IBM Cloud -> Launch
 Catalog -> Watson -> Watson Studio
-  
-![png](images/2_watson_services_catalog.png)  
+
+![png](images/2_watson_services_catalog.png)
 
 
 ## 2. Create IBM Cloud services
 
-### 2.1 Download sample data, configuration file, code  
+### 2.1 Download sample data, configuration file, code
 
 Download the [sample data file](https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online%20Retail%20Sample.csv), [sample configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt), [python notebook](https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segmentation_promo.ipynb) from github and store it in your a local folder. This will be used to upload to database in the next steps.
 
 Once you are familiar with the entire flow of this Pattern, you can use your own data for analysis. But ensure that your data format is exactly same as provided in the sample data file and configuration file.
-  
+
 ## 3. Create the Jupyter notebook
 
-First create a new project in Watson Studio. Follow the detailed steps provided in the [IBM online documentation for Watson Studio Project creation](https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html), or watch a video on using [Watson Studio to create a project](https://youtu.be/QSttEjcHtl0).
+First create a new project in Watson Studio. Follow the detailed steps provided in the [IBM online documentation for Watson Studio Project creation](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/creating-notebooks.html), or watch a video on using [Watson Studio to create a project](https://youtu.be/QSttEjcHtl0).
 
-In [Watson Studio](http://dataplatform.ibm.com/):
+In [Watson Studio](https://dataplatform.cloud.ibm.com/):
 
-Use the menu on the top to select `Projects` and then `Default Project`. 
+Use the menu on the top to select `Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
 
 * Select the `From URL` tab.
@@ -114,73 +114,73 @@ Click on `Add notebooks` (upper right) to create a notebook.
 https://github.com/IBM/commerce_pos_analytics/blob/master/notebook/customer_segmentation_promo.ipynb
 * Select the free Anaconda runtime.
 * Click the `Create` button.
-* Upload the sample .json, .txt Watson Studio configuration file to Watson Studio Object storage from URL below:  
-    "https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online%20Retail%20Sample.csv"  
-    https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt  
+* Upload the sample .json, .txt Watson Studio configuration file to Watson Studio Object storage from URL below:
+    "https://github.com/IBM/commerce_pos_analytics/blob/master/data/Online%20Retail%20Sample.csv"
+    https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt
 
-  To upload these files in Watson Studio object storage, 
+  To upload these files in Watson Studio object storage,
    * Go to `My Projects` -> `Your Project Name`
    * Click on the ``Find and add data`` icon on top ribbon
-   * Select the file and upload one by one  
+   * Select the file and upload one by one
 
-   ![png](images/3_upload_file_sample.png)  
-  
-  Now you must be able to see the uploaded files listed under `My Projects` -> `Your Project Name` -> `Assets`  tab  
+   ![png](images/3_upload_file_sample.png)
+
+  Now you must be able to see the uploaded files listed under `My Projects` -> `Your Project Name` -> `Assets`  tab
   ![png](images/4_dsx_fileassets.png)
-  
+
 ## 4. Add the data and configuraton file
 Fix-up configuration parameter .json file name and values:
 
 Go to the Notebook in Watson Studio by navigating to `My Projects` -> `Your Project Name`
 Under ``Assets`` tab, under ``Notebooks`` section you will find the Notebook you just imported
-Click on the ``Click to Edit and Lock`` icon to edit the notebook in Jupyter notebook in Watson Studio  
+Click on the ``Click to Edit and Lock`` icon to edit the notebook in Jupyter notebook in Watson Studio
 
-For more details on Creating, Editing and sharing notebooks in IBM Watson Studio refer to [Notebooks Watson Studio documentation](https://datascience.ibm.com/docs/content/analyze-data/notebooks-parent.html)
+For more details on Creating, Editing and sharing notebooks in IBM Watson Studio refer to [Notebooks Watson Studio documentation](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/notebooks-parent.html)
 
 You can now update the variables that refer to the .txt configuration file name in the Python - Jupyter Notebook.
-This step is necessary only if you had changed the name of the sample .json configuration file you had uploaded earlier for any reason.  
+This step is necessary only if you had changed the name of the sample .json configuration file you had uploaded earlier for any reason.
 
-![png](images/5_set_config_filename.png)  
+![png](images/5_set_config_filename.png)
 
 
 The default .txt configuration file, you uploaded earlier works without any changes with the Sample data supplied.
 
 If you wanted to customise the Segmentation model to suit your requirements you can do so. Below are the steps to configure the .json configuration file to train the Predictive models using your custom data file.
 
-1. Download the [.txt configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt) to your Computer local folder  
+1. Download the [.txt configuration file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt) to your Computer local folder
 2. Open a local copy of the .txt file in text editor like notepad and edit the [Watson Studio configuration .json file](https://github.com/IBM/commerce_pos_analytics/blob/master/configuration/PromoConfig.txt)
 3. 3.	Update the ``column values`` to suit your requirements and save the PromoConfig.txt file. Retain the rest of the format and composition of the .txt file
-4. Delete the copy of `PromoConfig.txt` in Watson Studio data store if one is already uploaded by you earlier.  
-5. Now upload your local edited copy of `PromoConfig.txt` by following the steps in section 6.3 above.  
-    
+4. Delete the copy of `PromoConfig.txt` in Watson Studio data store if one is already uploaded by you earlier.
+5. Now upload your local edited copy of `PromoConfig.txt` by following the steps in section 6.3 above.
+
 ![png](images/6_config_file_sample.png)
-    
-The descriptions of the columns that can be configured are as below.  
 
-i. Customer Segment: Name of the Customer segement tobe assigned  
-ii. Segment Auto Rank: Corresponding Ranking for the Customer segment. Used only if the Customer segmentation is run as AUTO  
-iii. RFrom, RTo: Range of Recency value in dates. This is a numeric field with range from 0-100. Used only if the Customer segmentation mode is run as MANUAL  
-iv. FFrom, FTo: Range of Frequency value in dates. This is a numeric field with range from 0-100. Used only if the Customer segmentation mode is run as MANUAL  
-v.MFrom, MTo: Range of Shopping value. This is a numeric field with range from 0-100. Used only if the Customer segmentation mode is run as MANUAL  
+The descriptions of the columns that can be configured are as below.
 
-* The cell 3.1.2 of the Jupyter Notebook has a function definition which is shown for illustration purposes.  
-These details that have user specific security details are striked out in the screenshots shown below.  
-This function will need to be recreated with your user specific access credentials ang target data object.  
-In order to do that first delete all pre existing code in cell 3.1.2 of the notebook.  
-  
-Note: The .pynb file that you imported have code with dummy credentials for illustration purposes.  
-This needs to be replaced by your user specific function with your own access credentials.  
-The steps below explain that.  
-  
+i. Customer Segment: Name of the Customer segement tobe assigned
+ii. Segment Auto Rank: Corresponding Ranking for the Customer segment. Used only if the Customer segmentation is run as AUTO
+iii. RFrom, RTo: Range of Recency value in dates. This is a numeric field with range from 0-100. Used only if the Customer segmentation mode is run as MANUAL
+iv. FFrom, FTo: Range of Frequency value in dates. This is a numeric field with range from 0-100. Used only if the Customer segmentation mode is run as MANUAL
+v.MFrom, MTo: Range of Shopping value. This is a numeric field with range from 0-100. Used only if the Customer segmentation mode is run as MANUAL
 
-* In section 3.1.2 of Jupyter Notebook (not this README file), Insert (replace) your own Object storage file credentials to read the `PromoConfig.txt` configuration file  
-![png](images/8_insert_configconn.png)  
-  
+* The cell 3.1.2 of the Jupyter Notebook has a function definition which is shown for illustration purposes.
+These details that have user specific security details are striked out in the screenshots shown below.
+This function will need to be recreated with your user specific access credentials ang target data object.
+In order to do that first delete all pre existing code in cell 3.1.2 of the notebook.
 
-* This step will auto generate a function that reads the data followed by a call to the function as below:  
+Note: The .pynb file that you imported have code with dummy credentials for illustration purposes.
+This needs to be replaced by your user specific function with your own access credentials.
+The steps below explain that.
 
-Refer to screen shot above for details.  
-For more details, revisit the documentation help links provided in beginning of section 5.2.2  
+
+* In section 3.1.2 of Jupyter Notebook (not this README file), Insert (replace) your own Object storage file credentials to read the `PromoConfig.txt` configuration file
+![png](images/8_insert_configconn.png)
+
+
+* This step will auto generate a function that reads the data followed by a call to the function as below:
+
+Refer to screen shot above for details.
+For more details, revisit the documentation help links provided in beginning of section 5.2.2
 
 #### Add the data and configuration to the notebook
 
@@ -191,17 +191,17 @@ Use ``Find and Add Data`` (look for the ``10/01`` icon) and its ``Connections`` 
 Note: If you don't have your own data and configuration files, you can reuse our example in the `Read IoT Sensor data from database` section. Look in the `/data/iot_sensor_dataset.csv` directory for data file.
 
 ![png](images/10_insert_read_data_func.png)
-  
-The Customer segmentation can be run in 2 modes  
-  
-1.	By setting the mode to “AUTO” 
+
+The Customer segmentation can be run in 2 modes
+
+1.	By setting the mode to “AUTO”
 ![png](images/11_set_auto_mode.png)
-In AUTO mode Customer segmentation algorithm will automatically do the segmentation and ranking based on Customer Buying behavior     
-  
-2.	By setting the mode to “MANUAL”  
+In AUTO mode Customer segmentation algorithm will automatically do the segmentation and ranking based on Customer Buying behavior
+
+2.	By setting the mode to “MANUAL”
 ![png](images/12_set_manual_mode.png)
-In MANUAL mode, the range of values mentioned for Customer metrics will be used for applying the segmentation.  
-  
+In MANUAL mode, the range of values mentioned for Customer metrics will be used for applying the segmentation.
+
 
 ## 5. Run the notebook
 When a notebook is executed, what is actually happening is that each code cell in
@@ -231,74 +231,74 @@ There are several ways to execute the code cells in your notebook:
 ## 6. View the Customer segmentation results
 
 The notebook outputs the results in the Notebook which can be copied to clipboard
-Results for AUTO Customer segmentation  
-  
-![png](images/13_auto_segmentation_results.png)  
+Results for AUTO Customer segmentation
 
-If you are satisfied with the Automatic segmentation results, you can proceed further for runningthe Cognos Dashboard and analyze the insights  
+![png](images/13_auto_segmentation_results.png)
 
-If you wanted to further tweak and improve the results, you can update the config text file and run the Customer segmentation in manual mode  
-Results for MANUAL Customer segmentation  
-![png](images/14_manual_segmentation_results.png)  
-  
+If you are satisfied with the Automatic segmentation results, you can proceed further for runningthe Cognos Dashboard and analyze the insights
+
+If you wanted to further tweak and improve the results, you can update the config text file and run the Customer segmentation in manual mode
+Results for MANUAL Customer segmentation
+![png](images/14_manual_segmentation_results.png)
+
 
 ## 7. Dashboard for Customer Segment Visualization
-  
-Understanding data effectively can be tricky. With too little data, any kind of analysis is unreliable. But too much data can make it difficult to understand exactly what you’re looking at. These days, very few people suffer from too little data, but too much data is a common problem in the age of big data. 
+
+Understanding data effectively can be tricky. With too little data, any kind of analysis is unreliable. But too much data can make it difficult to understand exactly what you’re looking at. These days, very few people suffer from too little data, but too much data is a common problem in the age of big data.
 The [Cognos Dashboard Embedded](https://developer.ibm.com/data/cognos-dashboard/), a new service offered on IBM Cloud, lets developers easily add end-to-end data visualization capabilities to their applications so users can create visualizations that feel like part of the app.
-  
-### 7.1 Steps to Create the Visualizations:    
-As explained in the beginning of this Code Pattern you must have completed the below steps  
-1. Watson Studio & Create the Service  
-2. Watson Studio instance  
-3. Craete a New Project in Watson Project  
+
+### 7.1 Steps to Create the Visualizations:
+As explained in the beginning of this Code Pattern you must have completed the below steps
+1. Watson Studio & Create the Service
+2. Watson Studio instance
+3. Craete a New Project in Watson Project
 
 STEP 4: See for the output of the file loaded to datasets tab as part of the model execution process (see previous sections)
 If you don’t see the data file which is in csv format then,
 Add a csv file to the Project space which eventually will be added to the Datasets.
 
-![png](images/22_list_dataassets.png)  
-  
-STEP 5: From the Dashboard tab add a new dashboard:  
+![png](images/22_list_dataassets.png)
 
-![png](images/23_new_dashboard.png)  
-  
-As you are creating the dashboard for the first time, you will need to create Cognos Dashboard service.  
+STEP 5: From the Dashboard tab add a new dashboard:
 
-![png](images/24_create_cognosdashservice.png)  
-  
-STEP 6: Add a source as the .csv file from the recently uploaded dataset:  
+![png](images/23_new_dashboard.png)
 
-![png](images/25_add_cognossourcedata.png)  
-  
-See available csv files. Pick the ones which your model has uploaded to Cloud Storage space given to you.  
-Click on the Segmented Customers csv file:  
+As you are creating the dashboard for the first time, you will need to create Cognos Dashboard service.
 
-![png](images/26_segmented_custdatafile.png)  
-  
-STEP 6: Now, you can drag and drop the required fields to the Dashboard area.  
+![png](images/24_create_cognosdashservice.png)
 
-![png](images/27_addfields_todash.png)  
-  
-Also, you can create your own Calculations.  
+STEP 6: Add a source as the .csv file from the recently uploaded dataset:
 
-![png](images/28_create_calculations.png)  
-  
-![png](images/29_create_calculations.png)  
-  
-STEP 7: View Cognos dashboard:  
-![png](images/30_view_cognosdashboard.png)  
-  
+![png](images/25_add_cognossourcedata.png)
 
-STEP 8: Finally Share the output - Once you are done with building the simple and easy dashboard, you can share as an URL which you can plug into your any application.  
-![png](images/31_share_cognosdashboard.png)  
-  
-[Sample Dashboard for Customer Segmentataion](https://dataplatform.ibm.com/dashboards/88588f96-ce99-4483-b6ea-e6692d621307/view/7723bc0138e229ed74d2f2e407cf2f0e2b362c5db2bbd60288d07b4906362397a83f4191c828185ddf155765f4bf470dcb)
-  
+See available csv files. Pick the ones which your model has uploaded to Cloud Storage space given to you.
+Click on the Segmented Customers csv file:
+
+![png](images/26_segmented_custdatafile.png)
+
+STEP 6: Now, you can drag and drop the required fields to the Dashboard area.
+
+![png](images/27_addfields_todash.png)
+
+Also, you can create your own Calculations.
+
+![png](images/28_create_calculations.png)
+
+![png](images/29_create_calculations.png)
+
+STEP 7: View Cognos dashboard:
+![png](images/30_view_cognosdashboard.png)
+
+
+STEP 8: Finally Share the output - Once you are done with building the simple and easy dashboard, you can share as an URL which you can plug into your any application.
+![png](images/31_share_cognosdashboard.png)
+
+[Sample Dashboard for Customer Segmentataion](https://dataplatform.cloud.ibm.com/dashboards/88588f96-ce99-4483-b6ea-e6692d621307/view/7723bc0138e229ed74d2f2e407cf2f0e2b362c5db2bbd60288d07b4906362397a83f4191c828185ddf155765f4bf470dcb)
+
 # Troubleshooting
 
 [See DEBUGGING.md](DEBUGGING.md)
-  
+
 # License
 
 [Apache 2.0](LICENSE)
