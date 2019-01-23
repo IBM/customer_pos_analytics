@@ -1,8 +1,7 @@
-
 # Analytics driven Customer Behavior Ranking for Retail Promotions using POS data
 
 > Analytics driven Customer Behavior Ranking for Retail Promotions using POS data
-Profile Customer based on their Buying behavior using POS(Point of Sale) data from a Retail stores.
+Profile Customer based on their Buying behavior using POS (Point of Sale) data from a Retail stores.
 Normalised Behavior scores are computed based on their Shopping patterns and a Analytics Segmantation
 is run to identify Customers like Gold Class, Customers with Up Sell prospects or Customers at Risk and
 Dormant Customers. These Segments of Customers are then used for launching specific Promotions
@@ -19,7 +18,7 @@ The above pointers lead to the bigger question of:
 
 This Code pattern is a walkthrough of the steps involved in using PoS data to Segment Customers based on their buying behavior. Segmentation techniques are used to Rank Customers. The ranked Customer data is further used to generate Dashboards that delivers insights on the Customer buying Metrics
 
-IBM cloud storage, Python notebooks in IBM Data science experience, IBM Cognos will be used to implement the above Use case
+IBM cloud storage, Python notebooks in IBM Watson Studio, IBM Cognos will be used to implement the above Use case
 
 All the intermediary steps are modularized and all code open sourced to enable developers to use / modify the modules / sub-modules as they see fit for their specific application
 
@@ -89,7 +88,6 @@ Catalog -> Watson -> Watson Studio
 
 ![png](images/2_watson_services_catalog.png)
 
-
 ## 2. Create IBM Cloud services
 
 ### 2.1 Download sample data, configuration file, code
@@ -142,7 +140,6 @@ This step is necessary only if you had changed the name of the sample .json conf
 
 ![png](images/5_set_config_filename.png)
 
-
 The default .txt configuration file, you uploaded earlier works without any changes with the Sample data supplied.
 
 If you wanted to customise the Segmentation model to suit your requirements you can do so. Below are the steps to configure the .json configuration file to train the Predictive models using your custom data file.
@@ -172,10 +169,8 @@ Note: The .pynb file that you imported have code with dummy credentials for illu
 This needs to be replaced by your user specific function with your own access credentials.
 The steps below explain that.
 
-
 * In section 3.1.2 of Jupyter Notebook (not this README file), Insert (replace) your own Object storage file credentials to read the `PromoConfig.txt` configuration file
 ![png](images/8_insert_configconn.png)
-
 
 * This step will auto generate a function that reads the data followed by a call to the function as below:
 
@@ -201,7 +196,6 @@ In AUTO mode Customer segmentation algorithm will automatically do the segmentat
 2.	By setting the mode to “MANUAL”
 ![png](images/12_set_manual_mode.png)
 In MANUAL mode, the range of values mentioned for Customer metrics will be used for applying the segmentation.
-
 
 ## 5. Run the notebook
 When a notebook is executed, what is actually happening is that each code cell in
@@ -240,7 +234,6 @@ If you are satisfied with the Automatic segmentation results, you can proceed fu
 If you wanted to further tweak and improve the results, you can update the config text file and run the Customer segmentation in manual mode
 Results for MANUAL Customer segmentation
 ![png](images/14_manual_segmentation_results.png)
-
 
 ## 7. Dashboard for Customer Segment Visualization
 
@@ -289,7 +282,6 @@ Also, you can create your own Calculations.
 STEP 7: View Cognos dashboard:
 ![png](images/30_view_cognosdashboard.png)
 
-
 STEP 8: Finally Share the output - Once you are done with building the simple and easy dashboard, you can share as an URL which you can plug into your any application.
 ![png](images/31_share_cognosdashboard.png)
 
@@ -302,4 +294,3 @@ STEP 8: Finally Share the output - Once you are done with building the simple an
 # License
 
 [Apache 2.0](LICENSE)
-
